@@ -66,6 +66,23 @@ export default function ServiceIcon({ icon, className }: { icon: Service['icon']
           <path d="M14 32l10-10" stroke="#E10600" />
         </svg>
       );
+    case 'headlight':
+      return (
+        <svg {...common} xmlns="http://www.w3.org/2000/svg">
+          <path d="M8 14c0-3.3 2.7-6 6-6h6c9 0 20 7 20 16s-11 16-20 16h-6c-3.3 0-6-2.7-6-6V14Z" stroke="currentColor" />
+          <path d="M24 14c5 2 8 5.5 8 10s-3 8-8 10" stroke="#E10600" />
+          <path d="M34 12l6-4M36 24h6M34 36l6 4" stroke="#E10600" />
+        </svg>
+      );
+    case 'headlighttint':
+      return (
+        <svg {...common} xmlns="http://www.w3.org/2000/svg">
+          <path d="M8 14c0-3.3 2.7-6 6-6h6c9 0 20 7 20 16s-11 16-20 16h-6c-3.3 0-6-2.7-6-6V14Z" stroke="currentColor" />
+          <path d="M14 8 8 40" stroke="#E10600" />
+          <path d="M22 8l-7 32" stroke="#E10600" />
+          <path d="M30 8l-7 32" stroke="#E10600" />
+        </svg>
+      );
     default:
       return null;
   }

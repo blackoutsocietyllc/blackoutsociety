@@ -6,7 +6,7 @@ export type Service = {
   longDescription: string;
   bullets: string[];
   specs: { label: string; value: string }[];
-  icon: 'tint' | 'ppf' | 'ceramic' | 'wrap' | 'home' | 'commercial' | 'detailing' | 'removal';
+  icon: 'tint' | 'ppf' | 'ceramic' | 'wrap' | 'home' | 'commercial' | 'detailing' | 'removal' | 'headlight' | 'headlighttint';
   image?: string;
 };
 
@@ -158,6 +158,42 @@ export const additionalServices: Service[] = [
       { label: 'Reinstall Bundle', value: 'Available' },
     ],
     icon: 'removal',
+  },
+  {
+    slug: 'headlight-restoration',
+    title: 'Headlight Restoration',
+    shortTitle: 'Headlight Restore',
+    description:
+      'Cloudy, yellowed headlight lenses restored to optical clarity — improves nighttime visibility, not just looks.',
+    longDescription:
+      "UV exposure and oxidation turn clear headlight lenses cloudy and yellow over time — it's not just cosmetic, it measurably cuts how much light reaches the road at night. We wet-sand through multiple grits to cut through the oxidized layer, machine-polish the lens back to optical clarity, then seal it with a UV-resistant coating so it doesn't cloud back over in a few months like a quick buff job would.",
+    bullets: ['Removes yellowing & oxidation', 'Multi-stage wet-sand & polish', 'UV-protective sealant applied'],
+    specs: [
+      { label: 'Process', value: 'Wet-sand & polish' },
+      { label: 'Result', value: 'Optical clarity' },
+      { label: 'Sealant', value: 'UV-protective' },
+      { label: 'Turnaround', value: '1-2 hrs' },
+      { label: 'Warranty', value: '1yr' },
+    ],
+    icon: 'headlight',
+  },
+  {
+    slug: 'headlight-tinting',
+    title: 'Headlight Tinting',
+    shortTitle: 'Headlight Tint',
+    description:
+      'Precision-cut smoke or blackout film for headlights and taillights — a small detail that changes the whole front end.',
+    longDescription:
+      "Smoked or blacked-out lights are a small detail that changes the whole look of a car. We precision-cut film to each lens shape rather than free-handing it, so the edges come out clean and factory-tight. Options run from a light smoke that barely touches daytime light output to a full blackout — we'll help you land on a shade that still passes inspection where that matters.",
+    bullets: ['Precision-cut film per lens', 'Smoke to full blackout options', 'Legal-compliance light output available'],
+    specs: [
+      { label: 'Film Type', value: 'Precision-cut' },
+      { label: 'Finish Options', value: 'Smoke to Black' },
+      { label: 'Install Time', value: '1-2 hrs' },
+      { label: 'Legal Compliance', value: 'Available' },
+      { label: 'Warranty', value: '3yr' },
+    ],
+    icon: 'headlighttint',
   },
 ];
 
