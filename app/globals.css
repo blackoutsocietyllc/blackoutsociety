@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #0a0a0a;
+  color: #f5f5f5;
+}
+
+::selection {
+  background-color: #e10600;
+  color: #f5f5f5;
+}
+
+/* Scrollbar - premium thin styling */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #141414;
+}
+::-webkit-scrollbar-thumb {
+  background: #f5f5f5;
+  border-radius: 0;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #e10600;
+}
+
+@layer utilities {
+  .clip-angled {
+    clip-path: polygon(0 0, 100% 0, 100% 88%, 0 100%);
+  }
+  .clip-angled-r {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 88%);
+  }
+  .clip-corner {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 12% 100%, 0 70%);
+  }
+  .clip-card {
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 24px), calc(100% - 24px) 100%, 0 100%);
+  }
+  .text-stroke-ink {
+    -webkit-text-stroke: 1px #f5f5f5;
+    color: transparent;
+  }
+  .bg-noise {
+    background-image: radial-gradient(rgba(245, 245, 245, 0.06) 1px, transparent 1px);
+    background-size: 4px 4px;
+  }
+  .text-gradient-red {
+    background: linear-gradient(90deg, #f5f5f5 0%, #e10600 50%, #f5f5f5 100%);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+}
