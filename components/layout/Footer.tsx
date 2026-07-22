@@ -2,9 +2,7 @@ import Image from 'next/image';
 
 const footerLinks = [
   { href: '/services', label: 'Services' },
-  { href: '/#simulator', label: 'Tint Simulator' },
   { href: '/gallery', label: 'Gallery' },
-  { href: '/#process', label: 'Process' },
   { href: '/reviews', label: 'Reviews' },
   { href: '/blog', label: 'Blog' },
   { href: '/faq', label: 'FAQ' },
@@ -12,10 +10,9 @@ const footerLinks = [
 ];
 
 const socials = [
-  { label: 'Instagram', href: '#' },
-  { label: 'Facebook', href: '#' },
-  { label: 'TikTok', href: '#' },
-  { label: 'YouTube', href: '#' },
+  { label: 'Instagram', href: 'https://www.instagram.com/blackout_societyllc' },
+  { label: 'Facebook', href: 'https://www.facebook.com/profile.php?id=61591510170613' },
+  { label: 'TikTok', href: 'https://www.tiktok.com/@blackout_societyllc' },
 ];
 
 export default function Footer() {
@@ -65,7 +62,12 @@ export default function Footer() {
             <ul className="mt-5 space-y-3">
               {socials.map((social) => (
                 <li key={social.label}>
-                  <a href={social.href} className="text-sm text-white/70 transition-colors hover:text-blood">
+                  <a
+                    href={social.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sm text-white/70 transition-colors hover:text-blood"
+                  >
                     {social.label}
                   </a>
                 </li>
