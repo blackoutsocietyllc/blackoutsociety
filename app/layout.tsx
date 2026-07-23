@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import localFont from 'next/font/local';
 import { JetBrains_Mono } from 'next/font/google';
+import CallBar from '@/components/ui/CallBar';
 import './globals.css';
 
 const clashDisplay = localFont({
@@ -72,8 +73,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${clashDisplay.variable} ${satoshi.variable} ${jetbrainsMono.variable}`}>
-      <body className="font-body bg-base-light text-ink antialiased">
+      <body className="font-body bg-base-light text-ink antialiased pb-11">
         {children}
+        <CallBar />
       </body>
     </html>
   );

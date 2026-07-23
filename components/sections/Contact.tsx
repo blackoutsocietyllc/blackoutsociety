@@ -6,15 +6,28 @@ import { cn } from '@/lib/utils';
 
 const serviceOptions = ['Window Tint', 'Paint Protection Film', 'Ceramic Coating', 'Home Window Tinting', 'Not Sure Yet'];
 
-type Status = 'idle' | 'submitting' | 'success';
+type Status = 'idle' | 'submitting' | 'success' | 'error';
 
 export default function Contact() {
   const [status, setStatus] = useState<Status>('idle');
 
-  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     setStatus('submitting');
-    window.setTimeout(() => setStatus('success'), 900);
+    const form = e.currentTarget;
+
+    try {
+      const res = await fetch('https://formsubmit.co/ajax/blackoutsocietyllc@gmail.com', {
+        method: 'POST',
+        headers: { Accept: 'application/json' },
+        body: new FormData(form),
+      });
+      if (!res.ok) throw new Error('Submission failed');
+      setStatus('success');
+      form.reset();
+    } catch {
+      setStatus('error');
+    }
   }
 
   return (
@@ -39,6 +52,10 @@ export default function Contact() {
               </motion.div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-5">
+                <input type="hidden" name="_subject" value="New Quote Request — Blackout Society" />
+                <input type="hidden" name="_template" value="table" />
+                <input type="hidden" name="_captcha" value="false" />
+                <input type="text" name="_honey" tabIndex={-1} autoComplete="off" className="hidden" aria-hidden="true" />
                 <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
                   <Field label="Full Name" name="name" type="text" required autoComplete="name" />
                   <Field label="Phone" name="phone" type="tel" required autoComplete="tel" />
@@ -77,6 +94,15 @@ export default function Contact() {
                     className="w-full resize-none border border-ink/15 bg-base-light px-4 py-3 text-sm text-ink outline-none transition-colors focus:border-blood"
                   />
                 </div>
+                {status === 'error' && (
+                  <p className="text-sm font-semibold text-blood">
+                    Something went wrong sending your request — please call us at{' '}
+                    <a href="tel:+18779570491" className="underline">
+                      (877) 957-0491
+                    </a>{' '}
+                    instead.
+                  </p>
+                )}
                 <button
                   type="submit"
                   disabled={status === 'submitting'}
