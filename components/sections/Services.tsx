@@ -14,9 +14,9 @@ export default function Services() {
           eyebrow="What We Do"
           title={
             <>
-              Four disciplines.
+              Precision,
               <br />
-              One standard.
+              every time.
             </>
           }
           description="Every service we offer is built around the same philosophy: meticulous prep, premium materials, and installation that holds up for years — not months."
