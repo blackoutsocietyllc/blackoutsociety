@@ -94,7 +94,7 @@ export default function Contact() {
           <div className="flex flex-col gap-8">
             <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
               <InfoBlock title="Call Us" value="(877) 957-0491" href="tel:+18779570491" />
-              <InfoBlock title="Email" value="blackoutsocietyllc@gmail.com" href="mailto:blackoutsocietyllc@gmail.com" />
+              <InfoBlock title="Email" value="blackoutsocietyllc@gmail.com" />
               <InfoBlock title="Location" value="Bedford, Texas" />
               <InfoBlock title="Hours" value="Mon–Sat, 9AM–7PM" />
             </div>
