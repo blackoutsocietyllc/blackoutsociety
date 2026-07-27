@@ -37,12 +37,7 @@ export default function BlogPage() {
                   href={`/blog/${post.slug}`}
                   className="group flex h-full flex-col border border-ink/10 bg-base-panel p-6 transition-colors duration-300 hover:border-blood/40"
                 >
-                  <div className="flex aspect-[16/10] items-center justify-center border border-ink/10 bg-[repeating-linear-gradient(45deg,#1a1a1a,#1a1a1a_10px,#141414_10px,#141414_20px)]">
-                    <span className="border border-white/15 bg-white/5 px-2 py-1 text-[10px] font-bold uppercase tracking-[0.2em] text-white/50">
-                      Image Placeholder
-                    </span>
-                  </div>
-                  <span className="mt-5 inline-block w-fit border border-blood/40 px-2 py-0.5 text-[10px] font-bold uppercase tracking-[0.2em] text-blood">
+                  <span className="inline-block w-fit border border-blood/40 px-2 py-0.5 text-[10px] font-bold uppercase tracking-[0.2em] text-blood">
                     {post.category}
                   </span>
                   <h2 className="mt-3 font-display text-lg font-bold leading-snug tracking-tight text-ink transition-colors group-hover:text-blood">

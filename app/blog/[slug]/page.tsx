@@ -53,12 +53,6 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
               <span>{post.readTime}</span>
             </div>
 
-            <div className="mt-10 flex aspect-[16/7] items-center justify-center border border-ink/10 bg-[repeating-linear-gradient(45deg,#1a1a1a,#1a1a1a_10px,#141414_10px,#141414_20px)]">
-              <span className="border border-white/15 bg-white/5 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.2em] text-white/50">
-                Image Placeholder
-              </span>
-            </div>
-
             <div className="mt-10 space-y-6">
               {post.content.map((paragraph, i) => (
                 <p key={i} className="text-base leading-relaxed text-ink/75">
