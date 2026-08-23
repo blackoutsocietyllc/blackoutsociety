@@ -80,7 +80,12 @@ export default function Footer() {
           <p className="text-xs text-white/40">
             &copy; {new Date().getFullYear()} Blackout Society. All rights reserved.
           </p>
-          <p className="text-xs text-white/30">Placeholder legal / license number goes here.</p>
+          <div className="flex items-center gap-6">
+            <p className="text-xs text-white/30">Placeholder legal / license number goes here.</p>
+            <a href="/privacy" className="text-xs text-white/40 transition-colors hover:text-blood">
+              Privacy Policy
+            </a>
+          </div>
         </div>
       </div>
     </footer>
